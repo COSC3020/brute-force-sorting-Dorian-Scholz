@@ -20,3 +20,11 @@ randomly without memory instead of systematically trying them?
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+Answer: 
+
+The runtime complexity of the algorithm is factorial, O(n!). 
+
+A best-case input is a sorted list like [1,2,3]. The algorithm will check the first permutation it generates and find it sorted right away. The best case: O(n), because it only checks one permutation and stops. A worst-case input is a reverse-sorted list like [3, 2, 1]. The algorithm will generate and check all permutations before finding the sorted one at the very end. Worst case: O(n⋅n!), where n accounts for the cost of checking each permutation.
+
+Random will save space but could be slower due to repeats. Who knows how long that'll take? You may get it the first time or it will take n random tries because there’s a 1/n chance of getting the correct permutation each time.
